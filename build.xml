@@ -7,11 +7,11 @@
 <target name="compile" depends="clean">
 <mkdir dir="./build"/>
 <mkdir dir="./build/classes"/>
-<javac includeantruntime="true" srcdir="./src" destdir="./build/classes"/>
+<javac includeantruntime="true" srcdir="." destdir="./build/classes"/>
 </target>
 <target name="jar" depends="compile">
 <mkdir dir="./build/jar"/>
-<jar destfile="/home/ec2-user/Main.jar" basedir="./build/classes">
+<jar destfile="./build/jar/Main.jar" basedir="./build/classes">
 <manifest>
 <attribute name="Main-Class" value="home"/>
 </manifest>
